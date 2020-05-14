@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.pspcl.HrmspspclApplication;
 import com.pspcl.model.AddEmployee;
+import com.pspcl.model.Asset;
 import com.pspcl.repo.AddEmployeeRepository;
 import com.pspcl.service.IAddEmployeeService;
 @Service
@@ -35,8 +36,8 @@ public class AddEmployeeServiceImpl implements IAddEmployeeService {
 
 	@Override
 	public int updateEmployee(AddEmployee employee) {
-		int count = addrepo.save(employee).getEid();
-		return count;
+
+		return ((AddEmployee) addrepo.save(employee)).getEid();
 	}
 
 
@@ -45,6 +46,7 @@ public class AddEmployeeServiceImpl implements IAddEmployeeService {
 
 		addrepo.delete(employee);
 	}
+
 
 
 }
