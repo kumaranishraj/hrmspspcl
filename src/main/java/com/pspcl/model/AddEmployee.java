@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class AddEmployee implements Serializable{
+public class AddEmployee{
 	@Id
 //	?@SequenceGenerator(name = "mySeqGen", sequenceName = "mySeq", initialValue = 100, allocationSize = 50)
 //	  @GeneratedValue(generator = "mySeqGen")
